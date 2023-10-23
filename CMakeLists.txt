@@ -33,6 +33,5 @@ target_include_directories(
 include(cmake/install.cmake)
 
 if(BUILD_TESTING)
-  include(CTest)
   add_subdirectory(tests)
 endif()
