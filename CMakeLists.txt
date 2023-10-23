@@ -22,7 +22,7 @@ include(docs/Doxygen.cmake)
 
 include_directories(include)
 
-add_library(algodiff SHARED src/autoderiv.cpp src/dual_number.cpp
+add_library(algodiff SHARED src/algodiff.cpp src/dual_number.cpp
                             src/dual_number_ops.cpp)
 target_link_libraries(algodiff)
 
