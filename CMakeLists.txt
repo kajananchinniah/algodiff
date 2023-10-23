@@ -22,9 +22,11 @@ include(docs/Doxygen.cmake)
 
 include_directories(include)
 
+include(external/eigen.cmake)
+
 add_library(algodiff SHARED src/algodiff.cpp src/dual_number.cpp
-                            src/dual_number_ops.cpp)
-target_link_libraries(algodiff)
+                            src/dual_number_ops.cpp src/dual_number_eigen.cpp)
+target_link_libraries(algodiff PUBLIC Eigen3::Eigen)
 
 target_include_directories(
   algodiff PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
