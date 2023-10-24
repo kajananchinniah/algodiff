@@ -5,4 +5,6 @@
 #pragma once
 
 #include "dual_number.hpp"
+#include "dual_number_eigen.hpp"
 #include "dual_number_ops.hpp"
+#include "forward_mode.hpp"
