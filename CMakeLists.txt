@@ -5,9 +5,9 @@ project(
   VERSION 0.0.1
   LANGUAGES CXX)
 
-option(BUILD_TESTING "Build tests" ON)
+option(BUILD_TESTS "Build tests" ON)
 option(BUILD_DOCS "Build docs" ON)
-option(STATIC_ANALYSIS "Static analysis" ON)
+option(STATIC_ANALYSIS "Static analysis" OFF)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo)
@@ -24,8 +24,9 @@ include_directories(include)
 
 include(external/eigen.cmake)
 
-add_library(algodiff SHARED src/algodiff.cpp src/dual_number.cpp
-                            src/dual_number_ops.cpp src/dual_number_eigen.cpp)
+add_library(
+  algodiff SHARED src/algodiff.cpp src/dual_number.cpp src/dual_number_ops.cpp
+                  src/dual_number_eigen.cpp src/forward_mode.cpp)
 target_link_libraries(algodiff PUBLIC Eigen3::Eigen)
 
 target_include_directories(
@@ -34,6 +35,7 @@ target_include_directories(
 
 include(cmake/install.cmake)
 
-if(BUILD_TESTING)
+include(CTest)
+if(BUILD_TESTS)
   add_subdirectory(tests)
 endif()
