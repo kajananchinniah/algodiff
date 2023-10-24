@@ -2,6 +2,8 @@
  * Copyright (c) 2022 kajananchinniah
  * SPDX-License-Identifier: MIT
  */
+/// \file dual_number.hpp
+/// \brief Contains the implementation of a dual number
 #pragma once
 
 #include <algorithm>

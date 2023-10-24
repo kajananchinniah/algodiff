@@ -2,7 +2,10 @@
  * Copyright (c) 2022 kajananchinniah
  * SPDX-License-Identifier: MIT
  */
+/// \file forward_mode.hpp
+/// \brief Implements forward mode auto-differentiation
 #pragma once
+
 #include <algorithm>
 #include <functional>
 #include <iostream>

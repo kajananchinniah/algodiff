@@ -2,6 +2,8 @@
  * Copyright (c) 2023 kajananchinniah
  * SPDX-License-Identifier: MIT
  */
+/// \file dual_number_ops.hpp
+/// \brief Implements operations that can be performed on dual numbers
 #pragma once
 
 #include "dual_number.hpp"

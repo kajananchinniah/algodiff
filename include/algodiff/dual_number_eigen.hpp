@@ -2,6 +2,8 @@
  * Copyright (c) 2022 kajananchinniah
  * SPDX-License-Identifier: MIT
  */
+/// \file dual_number_eigen.hpp
+/// \brief Integrates dual numbers with Eigen
 #pragma once
 
 #include <Eigen/Core>

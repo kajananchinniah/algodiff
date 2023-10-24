@@ -2,6 +2,8 @@
  * Copyright (c) 2023 kajananchinniah
  * SPDX-License-Identifier: MIT
  */
+/// \file algodiff.hpp
+/// \brief Header that includes everything
 #pragma once
 
 #include "dual_number.hpp"
