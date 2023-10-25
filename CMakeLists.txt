@@ -22,7 +22,7 @@ include(docs/Doxygen.cmake)
 
 include_directories(include)
 
-include(external/eigen.cmake)
+add_subdirectory(external)
 
 add_library(
   algodiff SHARED src/algodiff.cpp src/dual_number.cpp src/dual_number_ops.cpp
@@ -37,5 +37,6 @@ include(cmake/install.cmake)
 
 include(CTest)
 if(BUILD_TESTS)
+  enable_testing()
   add_subdirectory(tests)
 endif()

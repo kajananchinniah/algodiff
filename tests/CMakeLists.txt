@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.21)
 
 project(test_algodiff LANGUAGES CXX)
 
-enable_testing()
-
 # Ignore clang-tidy
 if(CMAKE_CXX_CLANG_TIDY)
   set(CMAKE_CXX_CLANG_TIDY_ALGODIFF_TEST_TMP ${CMAKE_CXX_CLANG_TIDY})
