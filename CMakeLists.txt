@@ -7,7 +7,7 @@ project(
 
 option(BUILD_TESTS "Build tests" ON)
 option(BUILD_DOCS "Build docs" ON)
-option(STATIC_ANALYSIS "Static analysis" OFF)
+option(STATIC_ANALYSIS "Static analysis" ON)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo)
