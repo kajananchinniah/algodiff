@@ -8,7 +8,6 @@ project(
 option(BUILD_TESTS "Build tests" OFF)
 option(BUILD_DOCS "Build docs" ON)
 option(STATIC_ANALYSIS "Static analysis" OFF)
-option(BUILD_PYTHON "Build python" ON)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo)
@@ -40,8 +39,4 @@ include(CTest)
 if(BUILD_TESTS)
   enable_testing()
   add_subdirectory(tests)
-endif()
-
-if(BUILD_PYTHON)
-  add_subdirectory(python)
 endif()
